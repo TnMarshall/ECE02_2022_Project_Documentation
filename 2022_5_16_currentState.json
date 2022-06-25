@@ -1,0 +1,5189 @@
+[
+    {
+        "id": "6586a031ca9e6798",
+        "type": "tab",
+        "label": "Reactor Simulator",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "cf3645a9a943a451",
+        "type": "group",
+        "z": "6586a031ca9e6798",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e84572ff2bcffd92"
+        ],
+        "x": 2494,
+        "y": 559,
+        "w": 172,
+        "h": 82
+    },
+    {
+        "id": "a0f01fc76b4087f9",
+        "type": "serial-port",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "50",
+        "bin": "false",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "50"
+    },
+    {
+        "id": "0b26aeef64475717",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "adf50eda87de1256",
+        "type": "ui_tab",
+        "name": "Reactor State Graphs",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "935a3482c9931e9c",
+        "type": "ui_tab",
+        "name": "Reactor Simulator Inputs",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "97a3bcd36d1b4f5b",
+        "type": "ui_group",
+        "name": "Start Reactor",
+        "tab": "adf50eda87de1256",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "65a72880f537bef0",
+        "type": "ui_group",
+        "name": "Graphs",
+        "tab": "adf50eda87de1256",
+        "order": 1,
+        "disp": true,
+        "width": 30,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ef3b0b4efaa62c5",
+        "type": "ui_group",
+        "name": "Thermo-Mechanical Inputs",
+        "tab": "935a3482c9931e9c",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "166b5c604190c789",
+        "type": "ui_group",
+        "name": "Value Reset",
+        "tab": "935a3482c9931e9c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f3f234848ec34a1",
+        "type": "ui_group",
+        "name": "Neutronics Input",
+        "tab": "935a3482c9931e9c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4919823b71f5d56a",
+        "type": "ui_group",
+        "name": "Basic Calcs",
+        "tab": "935a3482c9931e9c",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4d058ab0232aab47",
+        "type": "ui_group",
+        "name": "Testing",
+        "tab": "935a3482c9931e9c",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1849f38f2ed2be3f",
+        "type": "ui_group",
+        "name": "Flux Information",
+        "tab": "935a3482c9931e9c",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5b02d9e9ba662c7d",
+        "type": "ui_group",
+        "name": "Production Rate",
+        "tab": "935a3482c9931e9c",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6ad0b1d5ef059dd9",
+        "type": "ui_group",
+        "name": "Equilibrium Poison",
+        "tab": "935a3482c9931e9c",
+        "order": 8,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8d6c565a1ea989a8",
+        "type": "ui_group",
+        "name": "Leakage",
+        "tab": "935a3482c9931e9c",
+        "order": 9,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3c2c54e4759edb1",
+        "type": "ui_group",
+        "name": "Thermal Utilization",
+        "tab": "935a3482c9931e9c",
+        "order": 10,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e3b51ca78a041cfa",
+        "type": "ui_group",
+        "name": "Control Rod",
+        "tab": "935a3482c9931e9c",
+        "order": 11,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "78ad15ec2efcc6b0",
+        "type": "ui_group",
+        "name": "Neutron Multiplication",
+        "tab": "935a3482c9931e9c",
+        "order": 12,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3b657bc2b06dd47",
+        "type": "ui_tab",
+        "name": "Reactor Control Panel",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "43a47f96d1bdb2fa",
+        "type": "ui_group",
+        "name": "Control Panel",
+        "tab": "d3b657bc2b06dd47",
+        "order": 1,
+        "disp": true,
+        "width": 27,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dc0b4df7e19eb10d",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 1,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "fd0b4a6fd4eacd72",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ff10bd81aad25dfb",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "75f9730f32bb821a",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b806c05f11d7bbb3",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a0cb52a63d9214d3",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c4a7a41d2a6364bc",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8caa9fadaaeffd32",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "664f4be703d8211d",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "86ad96a7ebd5666a",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "77a8dadaefb88695",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "04803ce4dacd6364",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 15,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "208d2af597e7b56c",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ecd28ba5bd7c8b96",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 19,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "847ecfacca95cc7f",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 20,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1492f018ea3e7c21",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 21,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c345e65eaae2ed74",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 22,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a1874c89f1c089ee",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 23,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1caee05a09c06d06",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 24,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "49774bd87563cf01",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 27,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "27b5d36e6c609387",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 28,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "aae2a9ebb03498d6",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 29,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "af82b1c7434a7dcc",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 30,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bb7499cd64f3ea13",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 32,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4505efed5772fffd",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 33,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "e149672dc99ceb12",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 36,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "16b10ac7170b3582",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 37,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "625f88fef3d9db02",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 38,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7de944c924775083",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 39,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "569f7653241b34ea",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 40,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "31d3491731c248e4",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 41,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "132cf4ab75d2f89c",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 42,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c01dba4549117e2d",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 43,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "428496f1eb2e9605",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 44,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "979458bbe245425f",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 45,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9adbac074d82edf4",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 46,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "fe8de251b2595b89",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 47,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "cde08518812dca4c",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 48,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "75d2ebbf25b8ab06",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 49,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b053bb84230cf7ee",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 50,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "29ed777351da3b0d",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 52,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bce1cc6a18c8fc4f",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 53,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "5a46f61e0d1073fd",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 54,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "993b11b99cddea8b",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 55,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c7ac7221fb695690",
+        "type": "ui_spacer",
+        "z": "6586a031ca9e6798",
+        "name": "spacer",
+        "group": "43a47f96d1bdb2fa",
+        "order": 56,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1b5af7042473bca8",
+        "type": "ui_button",
+        "z": "6586a031ca9e6798",
+        "name": "Value Reset",
+        "group": "166b5c604190c789",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Value Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "50",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 70,
+        "y": 620,
+        "wires": [
+            [
+                "f0a303535aaa2c5b",
+                "7eadf49588cfbb9f",
+                "625afa25eb2b8c25",
+                "7db1b5224b243b01",
+                "307a67efd7250c97"
+            ]
+        ]
+    },
+    {
+        "id": "ab87b6bbddedede8",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Pressure (bar)",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1260,
+        "y": 220,
+        "wires": [
+            [
+                "d832341b83e1cce1"
+            ]
+        ]
+    },
+    {
+        "id": "625afa25eb2b8c25",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Thermo-Mechanical Inputs",
+        "func": "var Pressure = { payload: 155 };\nvar Power = { payload: 10 };\nvar Volume = { payload: 1 };\nvar HDR = { payload: 40 };\nvar Average_coolant_temp = { payload: 275 };\nvar Fuel_density = { payload: 0.5 };\nvar Control_rod_radius = { payload: 2 };\nvar Boron_mass = { payload: 1000 };\nvar CRIF = { payload: 0.655414614 };\n\n\nreturn [Pressure, Power, Volume, HDR, Average_coolant_temp,Fuel_density,Control_rod_radius,Boron_mass,CRIF];",
+        "outputs": 9,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "ab87b6bbddedede8",
+                "99f0c950414c61b0"
+            ],
+            [
+                "9ccf1131eb58216f"
+            ],
+            [
+                "7e26beee67b5b25e"
+            ],
+            [
+                "c41b36c378aa92e3"
+            ],
+            [
+                "0c5da9c10c4ecdd7"
+            ],
+            [
+                "c02d7ce3473e312a"
+            ],
+            [
+                "a370558b48e5bb33"
+            ],
+            [
+                "da5cd3de2495b979"
+            ],
+            [
+                "22a5448b8b54c11a"
+            ]
+        ]
+    },
+    {
+        "id": "9ccf1131eb58216f",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Power (MWt)",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1250,
+        "y": 260,
+        "wires": [
+            [
+                "65dee9c6d25a09ff"
+            ]
+        ]
+    },
+    {
+        "id": "ebe76a8119445675",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "4919823b71f5d56a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Core Radius",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2450,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7e26beee67b5b25e",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Volume (m3)",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1250,
+        "y": 300,
+        "wires": [
+            [
+                "31838e4df1a8cb0d"
+            ]
+        ]
+    },
+    {
+        "id": "c41b36c378aa92e3",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "HDR",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1230,
+        "y": 340,
+        "wires": [
+            [
+                "d9c3648eebe40332"
+            ]
+        ]
+    },
+    {
+        "id": "0c5da9c10c4ecdd7",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Average Coolant Temp ( C )",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1300,
+        "y": 380,
+        "wires": [
+            [
+                "b19c6f5ed5f6cc2b"
+            ]
+        ]
+    },
+    {
+        "id": "c02d7ce3473e312a",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Fuel Density (g/cm3)",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 420,
+        "wires": [
+            [
+                "fd634b5d679f0d18"
+            ]
+        ]
+    },
+    {
+        "id": "a370558b48e5bb33",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Control Rod Radius (cm)",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1290,
+        "y": 460,
+        "wires": [
+            [
+                "6e703bf764822cb0"
+            ]
+        ]
+    },
+    {
+        "id": "da5cd3de2495b979",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Boron Mass (g)",
+        "tooltip": "",
+        "group": "9ef3b0b4efaa62c5",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1260,
+        "y": 500,
+        "wires": [
+            [
+                "223753088969b40a"
+            ]
+        ]
+    },
+    {
+        "id": "22a5448b8b54c11a",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Control Rod Insertion Fraction",
+        "tooltip": "",
+        "group": "97a3bcd36d1b4f5b",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1310,
+        "y": 540,
+        "wires": [
+            [
+                "48cbdc9679eef6d2"
+            ]
+        ]
+    },
+    {
+        "id": "7db1b5224b243b01",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Neutronics Input",
+        "func": "var enrichment_frac = { payload: 0.03 };\nvar v = { payload: 2.42 };\nvar usf = { payload: 505 };\nvar usa = { payload: 591 };\nvar bsa = { payload: 3409 };\nvar hsa = { payload: 0.295 };\nvar hss = { payload: 47.7 };\nvar osa = { payload: 0.000169 };\nvar oss = { payload: 4.01 };\nvar xesa = { payload: 2640000 };\nvar smsa = { payload: 61500 };\nvar ltmod = { payload: 2.85 };\nvar tt = { payload: 27 };\nvar erj = { payload: 0.0000000000320436 };\n\nreturn [enrichment_frac, v, usf, usa, bsa, hsa, hss, osa, oss, xesa, smsa, ltmod, tt, erj];",
+        "outputs": 14,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 880,
+        "wires": [
+            [
+                "c7fe6402ca8d8390"
+            ],
+            [
+                "5139f898524d2e0c"
+            ],
+            [
+                "47d3970b5ab24bb9"
+            ],
+            [
+                "fb8f5929f71eb7d7"
+            ],
+            [
+                "37106855fa4f57cd"
+            ],
+            [
+                "45a5e544dfd55231"
+            ],
+            [
+                "e89dcf6fafc7b7f0"
+            ],
+            [
+                "f494065f667910cc"
+            ],
+            [
+                "35950a84c2783cf8"
+            ],
+            [
+                "9bf8c1ddd9490e6c"
+            ],
+            [
+                "5176a6de0fcfef08"
+            ],
+            [
+                "ca8d112924260134"
+            ],
+            [
+                "7548e46fc71d5340"
+            ],
+            [
+                "67065f2c745d9b2a"
+            ]
+        ]
+    },
+    {
+        "id": "c7fe6402ca8d8390",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Enrichment fraction (atom)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1320,
+        "y": 620,
+        "wires": [
+            [
+                "0b379b63db71f5a2"
+            ]
+        ]
+    },
+    {
+        "id": "5139f898524d2e0c",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Neutrons per fission",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1300,
+        "y": 660,
+        "wires": [
+            [
+                "c3e13164dae814ba"
+            ]
+        ]
+    },
+    {
+        "id": "47d3970b5ab24bb9",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "235 U Sigma f (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1290,
+        "y": 700,
+        "wires": [
+            [
+                "546f71d996ed19a4"
+            ]
+        ]
+    },
+    {
+        "id": "fb8f5929f71eb7d7",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "235 U Sigma a (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1290,
+        "y": 740,
+        "wires": [
+            [
+                "fb0be20ae87a2193"
+            ]
+        ]
+    },
+    {
+        "id": "37106855fa4f57cd",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "10 B Sigma a (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1290,
+        "y": 780,
+        "wires": [
+            [
+                "a05f9a8524a7110d"
+            ]
+        ]
+    },
+    {
+        "id": "45a5e544dfd55231",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "1 H sigma a (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 820,
+        "wires": [
+            [
+                "04b367116f976dc6"
+            ]
+        ]
+    },
+    {
+        "id": "e89dcf6fafc7b7f0",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "1 H Sigma s (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 860,
+        "wires": [
+            [
+                "e02603a07f02340e"
+            ]
+        ]
+    },
+    {
+        "id": "f494065f667910cc",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "O sigma a (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 900,
+        "wires": [
+            [
+                "d9473c51d92942ab"
+            ]
+        ]
+    },
+    {
+        "id": "35950a84c2783cf8",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "O Sigma s (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 940,
+        "wires": [
+            [
+                "ad83fb1ee32555e3"
+            ]
+        ]
+    },
+    {
+        "id": "9bf8c1ddd9490e6c",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Xe sigma a (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 980,
+        "wires": [
+            [
+                "6059944292186604"
+            ]
+        ]
+    },
+    {
+        "id": "5176a6de0fcfef08",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Sm Sigma s (b)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1280,
+        "y": 1020,
+        "wires": [
+            [
+                "69fd2b2da7cbcaa3"
+            ]
+        ]
+    },
+    {
+        "id": "ca8d112924260134",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Ltmod",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1250,
+        "y": 1060,
+        "wires": [
+            [
+                "8468e2489dbf050e"
+            ]
+        ]
+    },
+    {
+        "id": "7548e46fc71d5340",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "TT",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1250,
+        "y": 1100,
+        "wires": [
+            [
+                "aae96ef348b9a858"
+            ]
+        ]
+    },
+    {
+        "id": "67065f2c745d9b2a",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Er(J)",
+        "tooltip": "",
+        "group": "2f3f234848ec34a1",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "topicType": "msg",
+        "x": 1250,
+        "y": 1140,
+        "wires": [
+            [
+                "3e36e8127f70262f"
+            ]
+        ]
+    },
+    {
+        "id": "70eebea857265a28",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "4919823b71f5d56a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Core Diameter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2380,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "76c84a9f84d9f9bb",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "4919823b71f5d56a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "235 N (cm^-3)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2100,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "733d07329422dce3",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "n235 Maker",
+        "func": "var n235 = msg.payload * 6.022*(10**23)/235;\nglobal.set(\"n235\", n235)\nmsg.payload = n235;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1850,
+        "y": 420,
+        "wires": [
+            [
+                "76c84a9f84d9f9bb",
+                "f7b854e81d0f092c",
+                "314b7ba42d0a3bd7"
+            ]
+        ]
+    },
+    {
+        "id": "fd634b5d679f0d18",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set fuelDensity",
+        "func": "global.set(\"fuelDensity\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 420,
+        "wires": [
+            [
+                "733d07329422dce3"
+            ]
+        ]
+    },
+    {
+        "id": "43276d42193dd477",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Zero Setter",
+        "func": "var Pressure = { payload: 0 };\nvar Power = { payload: 0 };\nvar Volume = { payload: 0 };\nvar HDR = { payload: 0 };\nvar Average_coolant_temp = { payload: 0 };\nvar Fuel_density = { payload: 0 };\nvar Control_rod_radius = { payload: 0 };\nvar Boron_mass = { payload: 0 };\nvar CRIF = { payload: 0 };\n\n\nreturn [Pressure, Power, Volume, HDR, Average_coolant_temp,Fuel_density,Control_rod_radius,Boron_mass,CRIF];",
+        "outputs": 9,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "ab87b6bbddedede8"
+            ],
+            [
+                "9ccf1131eb58216f"
+            ],
+            [
+                "7e26beee67b5b25e"
+            ],
+            [
+                "c41b36c378aa92e3"
+            ],
+            [
+                "0c5da9c10c4ecdd7"
+            ],
+            [
+                "c02d7ce3473e312a"
+            ],
+            [
+                "a370558b48e5bb33"
+            ],
+            [
+                "da5cd3de2495b979"
+            ],
+            [
+                "22a5448b8b54c11a",
+                "625afa25eb2b8c25"
+            ]
+        ]
+    },
+    {
+        "id": "d832341b83e1cce1",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set pressure",
+        "func": "global.set(\"pressure\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 220,
+        "wires": [
+            [
+                "c36f6f37edc13536",
+                "3010765da9e56f94",
+                "85f24265dd9420a1"
+            ]
+        ]
+    },
+    {
+        "id": "65dee9c6d25a09ff",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set power",
+        "func": "global.set(\"power\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 260,
+        "wires": [
+            [
+                "3f4fd6aaa83c09fa"
+            ]
+        ]
+    },
+    {
+        "id": "31838e4df1a8cb0d",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set volume",
+        "func": "global.set(\"volume\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 300,
+        "wires": [
+            [
+                "71a8a30ffb3281c5",
+                "683be2a9a17c41b1",
+                "3f4fd6aaa83c09fa"
+            ]
+        ]
+    },
+    {
+        "id": "d9c3648eebe40332",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set hdr",
+        "func": "global.set(\"hdr\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 340,
+        "wires": [
+            [
+                "683be2a9a17c41b1",
+                "29fc72d783723c60"
+            ]
+        ]
+    },
+    {
+        "id": "6e703bf764822cb0",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set crr",
+        "func": "global.set(\"crr\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 460,
+        "wires": [
+            [
+                "f9f4f5044c6d302b",
+                "8b82d9b0515e35fa"
+            ]
+        ]
+    },
+    {
+        "id": "223753088969b40a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set boronMass",
+        "func": "global.set(\"boronMass\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 500,
+        "wires": [
+            [
+                "71a8a30ffb3281c5"
+            ]
+        ]
+    },
+    {
+        "id": "48cbdc9679eef6d2",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set crif",
+        "func": "global.set(\"crif\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 540,
+        "wires": [
+            [
+                "089dc6a891e3c998"
+            ]
+        ]
+    },
+    {
+        "id": "b19c6f5ed5f6cc2b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set act",
+        "func": "global.set(\"act\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 360,
+        "wires": [
+            [
+                "c36f6f37edc13536",
+                "f04ae116a2ba8da7"
+            ]
+        ]
+    },
+    {
+        "id": "63a7e62e1f021258",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "4919823b71f5d56a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "BN",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2070,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "71a8a30ffb3281c5",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "bn Maker",
+        "func": "var bm = global.get(\"boronMass\");\nvar vol = global.get(\"volume\");\nvar bn = bm*(6.022*(10**22))/(vol*1000000)\nmsg.payload = bn;\nglobal.set(\"bn\" , bn)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1800,
+        "y": 360,
+        "wires": [
+            [
+                "63a7e62e1f021258",
+                "21f6e12bb08206df"
+            ]
+        ]
+    },
+    {
+        "id": "efb8d96f9c9e6d87",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "4919823b71f5d56a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Core Height",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2190,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "683be2a9a17c41b1",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "height",
+        "func": "var hdr = global.get(\"hdr\");\nvar vol = global.get(\"volume\");\nvar ans = (vol*(hdr**2)*4/3.141592653589793)**(1/3)*100\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 280,
+        "wires": [
+            [
+                "efb8d96f9c9e6d87",
+                "29fc72d783723c60",
+                "3010765da9e56f94",
+                "d18858a7777635f2"
+            ]
+        ]
+    },
+    {
+        "id": "29fc72d783723c60",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "diameter",
+        "func": "var hdr = global.get(\"hdr\");\nvar hei = global.get(\"height\");\nvar ans = hei/hdr;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2100,
+        "y": 200,
+        "wires": [
+            [
+                "70eebea857265a28",
+                "29c2c9392251442e"
+            ]
+        ]
+    },
+    {
+        "id": "29c2c9392251442e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "radius",
+        "func": "var d = global.get(\"diameter\");\nvar ans = d/2;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 140,
+        "wires": [
+            [
+                "ebe76a8119445675",
+                "be8168b468432867",
+                "bff508365422bc1a",
+                "8b82d9b0515e35fa"
+            ]
+        ]
+    },
+    {
+        "id": "c36f6f37edc13536",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "H20N Junction",
+        "func": "var act=global.get('act');\nvar pre=global.get('pressure');\nlet text1 = pre.toString();\nlet text2 = act.toString();\nlet textOut = text1 + \" \" + text2;\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 180,
+        "wires": [
+            [
+                "2069d94860d281bb",
+                "ce74b3bee9b13d07"
+            ]
+        ]
+    },
+    {
+        "id": "2069d94860d281bb",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/basic_calcs/H20N.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "H20N",
+        "x": 1810,
+        "y": 80,
+        "wires": [
+            [
+                "64db522dc5cdd27f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "54f4f00fddc86010",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "4919823b71f5d56a",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "H2ON",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2110,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "64db522dc5cdd27f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "h2on",
+        "func": "global.set(node.name , msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 140,
+        "wires": [
+            [
+                "54f4f00fddc86010",
+                "e047a2451e3c1db4",
+                "f1ef94e20c88968b"
+            ]
+        ]
+    },
+    {
+        "id": "3f4fd6aaa83c09fa",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "peak(flux information)",
+        "func": "var power = global.get(\"power\");\nvar vol = global.get(\"volume\");\nvar ERJ = global.get(\"erj\");\nvar pr = global.get(\"productionRate\");\nvar npf = global.get(\"npf\")\nvar ans = 3.64*power/vol/ERJ/(pr/npf)\nmsg.payload = ans;\nglobal.set(\"peak\" , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 600,
+        "wires": [
+            [
+                "e31bf0e6bc1c8ec2",
+                "cc3889ee2ae2e2e5"
+            ]
+        ]
+    },
+    {
+        "id": "3e36e8127f70262f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set erj",
+        "func": "global.set(\"erj\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 1140,
+        "wires": [
+            [
+                "3f4fd6aaa83c09fa"
+            ]
+        ]
+    },
+    {
+        "id": "f7b854e81d0f092c",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "productionRate",
+        "func": "var npf = global.get(\"npf\");\nvar n235 = global.get(\"n235\");\nvar usigma = global.get(\"uSigma_f\");\nvar ans = npf*n235*usigma*(10**(-24));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 680,
+        "wires": [
+            [
+                "3f4fd6aaa83c09fa",
+                "92a4e12a379c3801",
+                "147eb757de53a981",
+                "361f254fa4a4bacf"
+            ]
+        ]
+    },
+    {
+        "id": "c3e13164dae814ba",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set npf",
+        "func": "global.set(\"npf\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 660,
+        "wires": [
+            [
+                "f7b854e81d0f092c"
+            ]
+        ]
+    },
+    {
+        "id": "e31bf0e6bc1c8ec2",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "avg(flux information)",
+        "func": "var peak = global.get(\"peak\");\nvar ans = peak/3.64\nmsg.payload = ans;\nglobal.set(\"avg\" , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2360,
+        "y": 600,
+        "wires": [
+            [
+                "e84572ff2bcffd92",
+                "5518c5a91e35ca76"
+            ]
+        ]
+    },
+    {
+        "id": "cc3889ee2ae2e2e5",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "1849f38f2ed2be3f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "peak",
+        "label": "Peak Flux",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2350,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e84572ff2bcffd92",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "g": "cf3645a9a943a451",
+        "group": "1849f38f2ed2be3f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "average",
+        "label": "Average Flux",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2580,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "92a4e12a379c3801",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "5b02d9e9ba662c7d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Production Rate",
+        "label": "Production Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2160,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5518c5a91e35ca76",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Xeqav",
+        "func": "var gammal = 0.0639;\nvar pr = global.get(\"productionRate\");\nvar npf = global.get(\"npf\");\nvar smsig = global.get(\"smSigma\");\nvar flux_avg = global.get(\"avg\");\nvar lambdax = 0.0000209;\nvar gammaxe = 0.00237;\nvar xesigma = global.get(\"xeSigma\")\n\nvar ans = ((gammal+gammaxe)*(pr/npf)*flux_avg) / (lambdax+(xesigma*flux_avg*(10**(-24))));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2710,
+        "y": 960,
+        "wires": [
+            [
+                "faf13bfec78bcae1",
+                "f1ef94e20c88968b",
+                "40afb4c86e837a63"
+            ]
+        ]
+    },
+    {
+        "id": "6059944292186604",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set xeSigma",
+        "func": "global.set(\"xeSigma\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 980,
+        "wires": [
+            [
+                "5518c5a91e35ca76",
+                "40afb4c86e837a63"
+            ]
+        ]
+    },
+    {
+        "id": "69fd2b2da7cbcaa3",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set smSigma",
+        "func": "global.set(\"smSigma\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 1020,
+        "wires": [
+            [
+                "5518c5a91e35ca76",
+                "147eb757de53a981",
+                "244e92fc0067f8e3"
+            ]
+        ]
+    },
+    {
+        "id": "147eb757de53a981",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Seqav",
+        "func": "var gammaPm = 0.01071;\nvar pr = global.get(\"productionRate\");\nvar npf = global.get(\"npf\");\nvar smsig = global.get(\"smSigma\");\n\n\n\nvar ans = gammaPm *pr/npf/(smsig*(10**(-24)));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2710,
+        "y": 1040,
+        "wires": [
+            [
+                "4bbdca18220fb646",
+                "244e92fc0067f8e3"
+            ]
+        ]
+    },
+    {
+        "id": "faf13bfec78bcae1",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "6ad0b1d5ef059dd9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Xeq,av",
+        "label": "Xeq,av",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2860,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "4bbdca18220fb646",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "6ad0b1d5ef059dd9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Seq,av",
+        "label": "Seq,av",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2860,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "fb0be20ae87a2193",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set uSigma_a",
+        "func": "global.set(\"uSigma_a\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 740,
+        "wires": [
+            [
+                "314b7ba42d0a3bd7"
+            ]
+        ]
+    },
+    {
+        "id": "546f71d996ed19a4",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set uSigma_f",
+        "func": "global.set(\"uSigma_f\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 700,
+        "wires": [
+            [
+                "f7b854e81d0f092c"
+            ]
+        ]
+    },
+    {
+        "id": "65bc9d0c6d9936be",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Zero2 Setter",
+        "func": "var enrichment_frac = { payload: 0 };\nvar v = { payload: 0 };\nvar usf = { payload: 0 };\nvar usa = { payload: 0 };\nvar bsa = { payload: 0 };\nvar hsa = { payload: 0 };\nvar hss = { payload: 0 };\nvar osa = { payload: 0 };\nvar oss = { payload: 0 };\nvar xesa = { payload: 0 };\nvar smsa = { payload: 0 };\nvar ltmod = { payload: 0 };\nvar tt = { payload: 0 };\nvar erj = { payload: 0 };\n\nreturn [enrichment_frac, v, usf, usa, bsa, hsa, hss, osa, oss, xesa, smsa, ltmod, tt, erj];",
+        "outputs": 14,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1100,
+        "wires": [
+            [
+                "c7fe6402ca8d8390",
+                "7db1b5224b243b01"
+            ],
+            [
+                "5139f898524d2e0c"
+            ],
+            [
+                "47d3970b5ab24bb9"
+            ],
+            [
+                "fb8f5929f71eb7d7"
+            ],
+            [
+                "37106855fa4f57cd"
+            ],
+            [
+                "45a5e544dfd55231"
+            ],
+            [
+                "e89dcf6fafc7b7f0"
+            ],
+            [
+                "f494065f667910cc"
+            ],
+            [
+                "35950a84c2783cf8"
+            ],
+            [
+                "9bf8c1ddd9490e6c"
+            ],
+            [
+                "5176a6de0fcfef08"
+            ],
+            [
+                "ca8d112924260134"
+            ],
+            [
+                "7548e46fc71d5340"
+            ],
+            [
+                "67065f2c745d9b2a"
+            ]
+        ]
+    },
+    {
+        "id": "0b379b63db71f5a2",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set enrichmentFraction",
+        "func": "global.set(\"enrichmentFraction\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 620,
+        "wires": [
+            [
+                "3010765da9e56f94"
+            ]
+        ]
+    },
+    {
+        "id": "a05f9a8524a7110d",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set bSigma",
+        "func": "global.set(\"bSigma\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 780,
+        "wires": [
+            [
+                "21f6e12bb08206df"
+            ]
+        ]
+    },
+    {
+        "id": "04b367116f976dc6",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set hSigmaA",
+        "func": "global.set(\"hSigmaA\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 820,
+        "wires": [
+            [
+                "3010765da9e56f94",
+                "0b6021ecd771666d",
+                "f1ef94e20c88968b"
+            ]
+        ]
+    },
+    {
+        "id": "e02603a07f02340e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set hSigmaS",
+        "func": "global.set(\"hSigmaS\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 860,
+        "wires": [
+            [
+                "e047a2451e3c1db4"
+            ]
+        ]
+    },
+    {
+        "id": "d9473c51d92942ab",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set OSigmaA",
+        "func": "global.set(\"OSigmaA\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 900,
+        "wires": [
+            [
+                "3010765da9e56f94",
+                "0b6021ecd771666d"
+            ]
+        ]
+    },
+    {
+        "id": "ad83fb1ee32555e3",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set OSigmaS",
+        "func": "global.set(\"OSigmaS\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 940,
+        "wires": [
+            [
+                "e047a2451e3c1db4"
+            ]
+        ]
+    },
+    {
+        "id": "8468e2489dbf050e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set ltmod",
+        "func": "global.set(\"ltmod\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 1060,
+        "wires": [
+            [
+                "7014432d9bd5901b"
+            ]
+        ]
+    },
+    {
+        "id": "aae96ef348b9a858",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set tt",
+        "func": "global.set(\"tt\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 1100,
+        "wires": [
+            [
+                "1ba1710b8d6b4437"
+            ]
+        ]
+    },
+    {
+        "id": "bf22cdba6c243fd6",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/NewThermalUtilization/NewThermalUtilizationAll.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Thermal Utilization",
+        "x": 3090,
+        "y": 780,
+        "wires": [
+            [
+                "81cd03966b4a7093"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3010765da9e56f94",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Thermal Utilization Junction",
+        "func": "var ltmod = global.get('ltmod');\nvar pre=global.get('pressure');\nvar act=global.get('act_2');\nvar rad=0.596831037;\nvar ltfuel = 1.55;\nvar latticePitch = 1.83225942;\nvar hsigma=global.get('hSigmaA');\nvar osigma=global.get('OSigmaA');\nvar height = global.get('height');\nvar vol = global.get('volume');\nvar ef = global.get('enrichmentFraction');\nvar sigma235 = 591;\nvar sigma238 = 2.42;\n\n\n\nlet text1 = ltmod.toString();\nlet text2 = pre.toString();\nlet text3 = act.toString();\nlet text4 = rad.toString();\nlet text5 = ltfuel.toString();\nlet text6 = latticePitch.toString();\nlet text7 = hsigma.toString();\nlet text8 = osigma.toString();\nlet text9 = height.toString();\nlet text10 = vol.toString();\nlet text11 = ef.toString();\nlet text12 = sigma235.toString();\nlet text13 = sigma238.toString();\n\n\nlet textOut = text1 + \" \" + text2 + \" \" + text3 + \" \" + text4 + \" \" + text5 + \" \" + text6 + \" \" + text7 + \" \" + text8 + \" \" + text9 + \" \" + text10 + \" \" + text11 + \" \" + text12 + \" \" + text13;\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2820,
+        "y": 780,
+        "wires": [
+            [
+                "bf22cdba6c243fd6"
+            ]
+        ]
+    },
+    {
+        "id": "4f3dd6051c8cd9e6",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "d3c2c54e4759edb1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Thermal Utilization",
+        "label": "Thermal Utilization",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 3650,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "81cd03966b4a7093",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "ThermalUtilization",
+        "func": "global.set(node.name , msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3330,
+        "y": 760,
+        "wires": [
+            [
+                "4f3dd6051c8cd9e6"
+            ]
+        ]
+    },
+    {
+        "id": "e047a2451e3c1db4",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumSH2O",
+        "func": "var h2on = global.get(\"h2on\");\nvar hss = global.get(\"hSigmaS\");\nvar oss = global.get(\"OSigmaS\");\nvar ans = h2on*(2*hss+oss)*(10**(-24));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 760,
+        "wires": [
+            [
+                "0b6021ecd771666d"
+            ]
+        ]
+    },
+    {
+        "id": "0b6021ecd771666d",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumTH2O",
+        "func": "var h2on = global.get(\"h2on\");\nvar hsa = global.get(\"hSigmaA\");\nvar osa = global.get(\"OSigmaA\");\nvar ssh20 = global.get(\"sumSH2O\");\nvar ans = h2on*(2*hsa+osa)*(10**(-24)) + ssh20;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2250,
+        "y": 920,
+        "wires": [
+            [
+                "f9f4f5044c6d302b"
+            ]
+        ]
+    },
+    {
+        "id": "f9f4f5044c6d302b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "d_cr",
+        "func": "var H19 = global.get(\"D_LR\");\nvar B8 = global.get(\"crr\");\nvar K3 = global.get(\"sumTH2O\");\nvar ans = 2.13*H19*(B8*K3+0.9354)/(B8*K3+0.5098);\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3050,
+        "y": 520,
+        "wires": [
+            [
+                "8b82d9b0515e35fa"
+            ]
+        ]
+    },
+    {
+        "id": "d2caa1197cd6a1d2",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/leakage_rate/p20.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "p20",
+        "x": 2550,
+        "y": 260,
+        "wires": [
+            [
+                "03cf3099c4bcde26"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "03cf3099c4bcde26",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "p20",
+        "func": "global.set(node.name , msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2710,
+        "y": 240,
+        "wires": [
+            [
+                "ac502702f8fe5896",
+                "1ba1710b8d6b4437"
+            ]
+        ]
+    },
+    {
+        "id": "f0a303535aaa2c5b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "D20",
+        "func": "global.set('D20' , 0.16)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 90,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6f7fbbd57e27abb",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/leakage_rate/p_dens.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "p(g/cm^3)",
+        "x": 2960,
+        "y": 420,
+        "wires": [
+            [
+                "1c5782fb2f1f4a3f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1c5782fb2f1f4a3f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "p_dens",
+        "func": "global.set(node.name , msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3120,
+        "y": 400,
+        "wires": [
+            [
+                "ac502702f8fe5896",
+                "1ba1710b8d6b4437"
+            ]
+        ]
+    },
+    {
+        "id": "85f24265dd9420a1",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "p20 Junction",
+        "func": "var pre=global.get('pressure');\nlet text1 = pre.toString();\nlet textOut = text1;\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2370,
+        "y": 260,
+        "wires": [
+            [
+                "d2caa1197cd6a1d2"
+            ]
+        ]
+    },
+    {
+        "id": "ce74b3bee9b13d07",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "p Junction",
+        "func": "var act=global.get('act');\nvar pre=global.get('pressure');\nlet text1 = pre.toString();\nlet text2 = act.toString();\nlet textOut = text1 + \" \" + text2;\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2710,
+        "y": 420,
+        "wires": [
+            [
+                "d6f7fbbd57e27abb"
+            ]
+        ]
+    },
+    {
+        "id": "ac502702f8fe5896",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "D_LR",
+        "func": "var p20 = global.get(\"p20\");\nvar D20 = global.get(\"D20\");\nvar p_dens = global.get(\"p_dens\");\nvar act = global.get(\"act\");\nvar ans =D20*(p20/p_dens)*((act+273)/(293))**0.47;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3190,
+        "y": 320,
+        "wires": [
+            [
+                "47f19c97bca05e10",
+                "f9f4f5044c6d302b"
+            ]
+        ]
+    },
+    {
+        "id": "47f19c97bca05e10",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "ds_LR",
+        "func": "var dlr = global.get(\"D_LR\");\nvar ans = dlr*2.13;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3370,
+        "y": 300,
+        "wires": [
+            [
+                "389e40bb18084c5e",
+                "be8168b468432867"
+            ]
+        ]
+    },
+    {
+        "id": "389e40bb18084c5e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "h_tilde",
+        "func": "var ds = global.get(\"ds_LR\");\nvar ch = global.get(\"height\");\nvar ans = ch + 2*ds;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3530,
+        "y": 300,
+        "wires": [
+            [
+                "a7138dfaad9b123f"
+            ]
+        ]
+    },
+    {
+        "id": "be8168b468432867",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "r_tilde",
+        "func": "var ds = global.get(\"ds_LR\");\nvar cr = global.get(\"radius\");\nvar ans = cr + ds;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3530,
+        "y": 260,
+        "wires": [
+            [
+                "a7138dfaad9b123f"
+            ]
+        ]
+    },
+    {
+        "id": "a7138dfaad9b123f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "bSq",
+        "func": "var ht = global.get(\"h_tilde\");\nvar rt = global.get(\"r_tilde\");\nvar ans =(2.405/rt)**2+(3.141592653589793/rt/ht)**2;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3730,
+        "y": 280,
+        "wires": [
+            [
+                "3f11c995ea5dc457",
+                "bff508365422bc1a"
+            ]
+        ]
+    },
+    {
+        "id": "3f11c995ea5dc457",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Leakage",
+        "func": "var bsq = global.get(\"bSq\");\nvar d = global.get(\"D_LR\");\nvar ans = bsq * d;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3900,
+        "y": 280,
+        "wires": [
+            [
+                "33e38aef4295944d"
+            ]
+        ]
+    },
+    {
+        "id": "33e38aef4295944d",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "8d6c565a1ea989a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Leakage",
+        "label": "Leakage",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 3900,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1ba1710b8d6b4437",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "theta_t_cr",
+        "func": "var p20 = global.get(\"p20\");\nvar pd = global.get(\"p_dens\");\nvar tt = global.get(\"tt\");\nvar ans = tt*((p20/pd)*(p20/pd));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3580,
+        "y": 460,
+        "wires": [
+            [
+                "7014432d9bd5901b"
+            ]
+        ]
+    },
+    {
+        "id": "7014432d9bd5901b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "ltmod_cr",
+        "func": "var ltmod = global.get(\"ltmod\");\nvar pd = global.get(\"p_dens\");\nvar p20 = global.get(\"p20\");\nvar act = global.get(\"act\")\nvar ans = ltmod**2*(p20/pd)**2*((act+273)/293)**0.97;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3820,
+        "y": 540,
+        "wires": [
+            [
+                "e12b8d2e93dc06d1"
+            ]
+        ]
+    },
+    {
+        "id": "e12b8d2e93dc06d1",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "MT2",
+        "func": "var ltmod = global.get(\"ltmod_cr\");\nvar pd = global.get(\"theta_t_cr\");\nvar ans = ltmod + pd;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3990,
+        "y": 540,
+        "wires": [
+            [
+                "bff508365422bc1a"
+            ]
+        ]
+    },
+    {
+        "id": "e7c8a6f19d0ffe81",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/control_rod/term2.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Term2",
+        "x": 4170,
+        "y": 660,
+        "wires": [
+            [
+                "fa76721bd7b217b9"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fa76721bd7b217b9",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Term2",
+        "func": "global.set(node.name , msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4330,
+        "y": 640,
+        "wires": [
+            [
+                "5bfc2ed3cdb2de7a"
+            ]
+        ]
+    },
+    {
+        "id": "8b82d9b0515e35fa",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Term2 Junction",
+        "func": "var radius = global.get('radius');\nvar crr = global.get('crr');\nvar dcr=global.get('d_cr');\n\n\nlet text1 = crr.toString();\nlet text2 = radius.toString();\nlet text3 = dcr.toString();\n\n\nlet textOut = text1 + \" \" + text2 + \" \" + text3;\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3920,
+        "y": 680,
+        "wires": [
+            [
+                "e7c8a6f19d0ffe81"
+            ]
+        ]
+    },
+    {
+        "id": "bff508365422bc1a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Term1",
+        "func": "var mt2 = global.get(\"MT2\");\nvar b2 = global.get(\"bSq\");\nvar cr = global.get(\"radius\")\nvar ans = 7.43*mt2/(1+b2*mt2)/(cr**2);\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4150,
+        "y": 460,
+        "wires": [
+            [
+                "5bfc2ed3cdb2de7a"
+            ]
+        ]
+    },
+    {
+        "id": "5bfc2ed3cdb2de7a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "roww",
+        "func": "var t1 = global.get(\"Term1\");\nvar t2 = global.get(\"Term2\");\nvar ans = t1/t2;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4330,
+        "y": 480,
+        "wires": [
+            [
+                "d18858a7777635f2",
+                "089dc6a891e3c998"
+            ]
+        ]
+    },
+    {
+        "id": "d18858a7777635f2",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Insertion_depth",
+        "func": "var pw = global.get(\"roww\");\nvar h = global.get(\"height\");\nvar ans = pw*h;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4120,
+        "y": 340,
+        "wires": [
+            [
+                "653685d67081363d"
+            ]
+        ]
+    },
+    {
+        "id": "653685d67081363d",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "e3b51ca78a041cfa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Insertion Depth",
+        "label": "Insertion Depth",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 4460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "87bc72b1ed88886e",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/control_rod/prod.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "rowrod",
+        "x": 4770,
+        "y": 680,
+        "wires": [
+            [
+                "af8c4f2d13180df3"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "af8c4f2d13180df3",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "rowrod",
+        "func": "global.set(node.name , msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4670,
+        "y": 840,
+        "wires": [
+            [
+                "0d3b178fc9b715d1",
+                "361f254fa4a4bacf"
+            ]
+        ]
+    },
+    {
+        "id": "089dc6a891e3c998",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "RowRod Junction",
+        "func": "var pw = global.get(\"roww\");\nvar crif = global.get(\"crif\");\n\n\nlet text1 = pw.toString();\nlet text2 = crif.toString();\n\n\nlet textOut = text1 + \" \" + text2;\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4550,
+        "y": 600,
+        "wires": [
+            [
+                "87bc72b1ed88886e"
+            ]
+        ]
+    },
+    {
+        "id": "0d3b178fc9b715d1",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "e3b51ca78a041cfa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "prod",
+        "label": "Prod",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 4850,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "45ef2fead41f6839",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "78ad15ec2efcc6b0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "k no rod",
+        "label": "k no rod",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 4340,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "361f254fa4a4bacf",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "knorod",
+        "func": "var pr = global.get(\"productionRate\");\nvar sumA = global.get(\"suma\");\nvar leak = global.get(\"Leakage\");\nvar ans = pr/(sumA+leak);\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4130,
+        "y": 920,
+        "wires": [
+            [
+                "45ef2fead41f6839",
+                "424eabc14b3fc36b",
+                "f1b9f88ff3721e84"
+            ]
+        ]
+    },
+    {
+        "id": "424eabc14b3fc36b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "pnorod",
+        "func": "var k = global.get(\"knorod\");\n\nvar ans = (k-1)/k;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4280,
+        "y": 1060,
+        "wires": [
+            [
+                "6a8bdba4b43c517f",
+                "5596a3ce2583ca39"
+            ]
+        ]
+    },
+    {
+        "id": "5596a3ce2583ca39",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "prod_nm",
+        "func": "var p = global.get(\"pnorod\");\nvar prod = global.get(\"rowrod\");\nvar ans = p-prod;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4520,
+        "y": 1220,
+        "wires": [
+            [
+                "7348f61e28d4e2e6"
+            ]
+        ]
+    },
+    {
+        "id": "6a8bdba4b43c517f",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "78ad15ec2efcc6b0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "p no rod",
+        "label": "p no rod",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 4720,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "314b7ba42d0a3bd7",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumAfuel",
+        "func": "var n235 = global.get(\"n235\");\nvar gl = global.get('uSigma_a');//0.0639;//global.get(\"gammal\");\n\nvar ans = n235*gl*(10**(-24));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1920,
+        "y": 1180,
+        "wires": [
+            [
+                "7df65239ff74820a",
+                "02b70f95953e8b5d"
+            ]
+        ]
+    },
+    {
+        "id": "f1ef94e20c88968b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumAh2o",
+        "func": "var h2on = global.get(\"h2on\");\nvar hsa = global.get(\"hSigmaA\");//global.get(\"gammal\");\nvar osa = global.get(\"OSigmaA\");\nvar ans = h2on*(2*hsa+osa)*(10**(-24));\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3180,
+        "y": 960,
+        "wires": [
+            [
+                "7df65239ff74820a"
+            ]
+        ]
+    },
+    {
+        "id": "21f6e12bb08206df",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumAb",
+        "func": "var bn = global.get(\"bn\");\nvar bsa = global.get(\"bSigma\");//global.get(\"gammal\");\nvar ans = bn*bsa*(10**-24);\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 1120,
+        "wires": [
+            [
+                "7df65239ff74820a",
+                "40d809ff5523f477"
+            ]
+        ]
+    },
+    {
+        "id": "40afb4c86e837a63",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumxe",
+        "func": "var xeqav = global.get(\"Xeqav\");\nvar xs = global.get(\"xeSigma\");//global.get(\"gammal\");\nvar ans = xeqav*xs*(10**-24);\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2370,
+        "y": 1100,
+        "wires": [
+            [
+                "7df65239ff74820a"
+            ]
+        ]
+    },
+    {
+        "id": "244e92fc0067f8e3",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "sumSme",
+        "func": "var xeqav = global.get(\"smSigma\");\nvar xs = global.get(\"Seqav\");//global.get(\"gammal\");\nvar ans = xeqav*xs*(10**-24);\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1920,
+        "y": 1360,
+        "wires": [
+            [
+                "7df65239ff74820a"
+            ]
+        ]
+    },
+    {
+        "id": "7df65239ff74820a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "suma",
+        "func": "var a = global.get(\"sumAfuel\");\nvar b = global.get(\"sumAh2o\");\nvar c = global.get(\"sumAb\");\nvar d = global.get(\"sumxe\");\nvar e = global.get(\"sumSme\");\n\n\nvar ans = a+b+c+d+e;\nmsg.payload = ans;\nglobal.set(node.name , ans)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2730,
+        "y": 1140,
+        "wires": [
+            [
+                "f3dfab2993c46b40",
+                "361f254fa4a4bacf"
+            ]
+        ]
+    },
+    {
+        "id": "f3dfab2993c46b40",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "d3c2c54e4759edb1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Sum all",
+        "label": "Sum all",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2540,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "43ca8f40483e53a3",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3  /home/pi/SeniorDesign_2022/pythonPointKinematics/piecewise_const_cmdLine.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Piecewise Const",
+        "x": 1030,
+        "y": 1760,
+        "wires": [
+            [
+                "a50ac58404dc1d48",
+                "4dcfeeb8bb44ee40",
+                "90a7c1c342275908",
+                "0d3f05e6ee981292"
+            ],
+            [],
+            [
+                "ccbfbedaa49c082f"
+            ]
+        ]
+    },
+    {
+        "id": "9f0d0f4290901f42",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Piecewise Junction",
+        "func": "var lambda = global.get('lambda_p');//[0.0127, 0.0317, 0.115, 0.311, 1.40, 3.87]\nvar beta = global.get('beta_p');\nvar beta_sum =global.get('beta_sum_p');\nvar L = global.get('neutron_gen_time');\nvar target = global.get('target_p');\nvar h = global.get('step_size');\nvar rho_case = global.get('rho_case');//global.get('rho_case');\nvar f_case = global.get('f_case');\nvar initcond = global.get('initcond');\nvar rval = global.get('rval');\n//if (rho_case == 0){\n//    rho_case = 0.0000001\n//}\n\nlet text1 = lambda.toString();\nlet text2 = beta.toString();\nlet text3 = beta_sum.toString();\nlet text4 = L.toString();\nlet text5 = target.toString();\nlet text6 = h.toString();\nlet text7 = rho_case.toString();\nlet text8 = f_case.toString();\nlet text9 = initcond.toString();\n//text9 = text9.replace(\"\\n\",\"\");\n//let text10 = rval.toString();\n\nlet textOut = \"\\\"\" + text1 + \"\\\" \\\"\" + text2 + \"\\\" \" + text3+ \" \" + text4 + \" \" + text5 + \" \" + text6 + \" \" + text7+ \" \" + text8 + \" \\\"\" + text9 + \"\\\"\";\n\nvar msgOut = { payload: textOut };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1840,
+        "wires": [
+            [
+                "43ca8f40483e53a3"
+            ]
+        ]
+    },
+    {
+        "id": "c09d8b4a52ea6441",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Piecewise sets",
+        "func": "global.set('lambda_p',   [0.0127, 0.0317, 0.115, 0.311, 1.4, 3.87]);\nglobal.set('beta_p',  [0.000266, 0.001491, 0.001316, 0.002849, 0.000896,0.000182]);\nglobal.set('beta_sum_p',  0.007);\nglobal.set('neutron_gen_time',  0.00002);\nglobal.set('target_p',  0.9)//1 second\nglobal.set('step_size',  0.3);//0.05);\nglobal.set('rho_case',  0.003);\nglobal.set('f_case',  0);\nglobal.set('rval',[0,0,0,0,0,0,0]);\n//global.set('initcond', [[1.00000000e+00], [1.04724409e+03], [2.35173502e+03], [5.72173913e+02], [4.58038585e+02], [3.20000000e+01], [2.35142119e+00]]);\n\nglobal.set('initcond', [1, 1047.24409, 2351.73502, 572.173913, 458.038585, 32, 2.35142119]);\nglobal.set('startup', 0);\nglobal.set('startupCount', 0);\nglobal.set('numberXenon', 0);\nglobal.set('numberIodine', 0);\nglobal.set('numberPm', 0);\nglobal.set('numberSamarium', 0);\nglobal.set('counter', 0);\nglobal.set('act', 275);\nglobal.set('started', 0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1720,
+        "wires": [
+            [
+                "7948395e88530520"
+            ]
+        ]
+    },
+    {
+        "id": "6136da5828853163",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "p(t)",
+        "func": "var b = global.get('pb');\nvar rx = global.get('prx');\nvar xe = global.get('pxe');\nvar sm = global.get('psm');\nvar rnorod = global.get('pnorod');//changes with thermal ut//rho no rod\nvar controlRod = global.get('rowrod');\nvar scrammed = global.get('crif');\nvar y = global.get('startup');\nvar true_reactivity = rnorod - b - xe -sm-controlRod;\n/*\nif (true_reactivity < 0){\n    true_reactivity = 0;\n}\n\nif (scrammed == 1){\n    true_reactivity = 0;\n}\nelse if (scrammed < 1 && y == 1){\n    true_reactivity = 0;\n}\n*/\nglobal.set('reactivity2p', true_reactivity)\nmsg.payload = true_reactivity;\n//true_reactivity = true_reactivity /100;\nif (true_reactivity > 0.003){\n    //shoot error\n    global.set(\"tooMuchReactivity\",1)\n}\nelse{\n    global.set(\"tooMuchReactivity\",0)\n}\nglobal.set('rho_case', true_reactivity)\n\n// msg.payload = [b, rx, xe, sm, rnorod, controlRod];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 2100,
+        "wires": [
+            [
+                "a3f1ceae330f9094",
+                "f0e4704b30bbb675",
+                "8014fe45d4a023a6",
+                "2c27b13dee08bc3b",
+                "7b0833dd4b4478a4",
+                "f76abf4a8a177508"
+            ]
+        ]
+    },
+    {
+        "id": "f04ae116a2ba8da7",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set act_2",
+        "func": "global.set(\"act_2\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2280,
+        "y": 760,
+        "wires": [
+            [
+                "3010765da9e56f94"
+            ]
+        ]
+    },
+    {
+        "id": "22842a5fcc12173e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Xenon rho",
+        "func": "var rep = global.get('rep');\nvar sigma_a = global.get('xeSigma');\nvar num_xe = global.get('numberXenon')/6.0221408e+23;\nvar fast_fission = 1.022037782;//treating as constant\nvar production_rate = global.get('productionRate');\n\n//var pxe = sigma_a * num_xe /(production_rate * fast_fission * rep)\nvar pxe = sigma_a * num_xe /(production_rate * fast_fission * rep)\n//pxe = num_xe/100;\nglobal.set('pxe', pxe)\nmsg.payload = pxe;\n//msg.payload = [rep, sigma_a, num_xe, fast_fission, production_rate];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1970,
+        "y": 1820,
+        "wires": [
+            [
+                "408f68e5c8c18e7e"
+            ]
+        ]
+    },
+    {
+        "id": "335eb72eb5d61b90",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Xenon number of",
+        "func": "var gammaI = 0.0639;\ngammaI = gammaI\nvar prodRate = global.get('productionRate')\nvar sigmaF = prodRate/2.42;\nvar flux = global.get('pke_flux')\nvar lambdaI = 1.265*(10**-5);\nvar numberI = global.get('numberIodine')\nvar gammaXe = 0.00237;\nvar lambdaXe = 9.188*(10**-6);\nvar sigmaXe = global.get('xeSigma')\nvar xenonAmount = global.get('numberXenon')\nvar scrammed = global.get('crif');\nvar y = global.get('startup');\n\n\nresult = xenonAmount + 6.0221408e+23*gammaXe*sigmaF*flux+lambdaI*numberI-gammaXe*xenonAmount-sigmaXe*xenonAmount*flux/50;\n//above set sigmaxe to cm^2 from barns\n\nif (result < 0){\n    result = 0;\n}\n/*\nvar x;\nvar crif = global.get(\"crif\");\nif (crif == 0){\n    x = xenonAmount*0.95\n}\nelse if (crif < 0.5){\n    x = xenonAmount + 0.75;\n}\nelse {\n    x = (xenonAmount +0.75) *1.2\n}\n*/\n//result = result/1000\nif (scrammed < 1 && y == 1){\n    result = result*0.9;\n}\n\nglobal.set('numberXenon', result)\n//global.set('numberXenon', result)\nmsg.payload = result;\n//msg.payload = [lambdaI, numberI];\n//msg.payload = [xenonAmount, 6.0221408e+23*gammaXe*sigmaF*flux, lambdaI*numberI, gammaXe*xenonAmount, sigmaXe*xenonAmount*flux];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1850,
+        "y": 1920,
+        "wires": [
+            [
+                "22842a5fcc12173e",
+                "0a2b7eb08d0f4343"
+            ]
+        ]
+    },
+    {
+        "id": "56fde2830e6e8f0a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Iodine number of",
+        "func": "var gammaI = 0.0639;\nvar prodRate = global.get('productionRate');\nvar sigmaF = prodRate/2.42;\nvar flux = global.get('pke_flux');\nvar lambdaI = 1.265*(10**-5);\nvar numberIodine = global.get('numberIodine');\nvar crif = global.get('crif')\n\nresult = (numberIodine + 6.0221408e+23*gammaI*sigmaF*flux-lambdaI*numberIodine)\nif (result < 0){\n    result = 0;\n}\nglobal.set('numberIodine', result)\n\nmsg.payload = [numberIodine, 6.0221408e+23*gammaI*sigmaF*flux, lambdaI*numberIodine]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 1740,
+        "wires": [
+            [
+                "335eb72eb5d61b90"
+            ]
+        ]
+    },
+    {
+        "id": "a50ac58404dc1d48",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "new initcond",
+        "func": "var a = msg.payload;\na = a.replace(\"[\",\"\").replace(\"]\",\"\").slice(0,-2);\nvar b = a.split(',');\nvar initcond = [b[0], b[1], b[2], b[3],b[4], b[5], b[6]];\nvar prx = b[0];\n//var initcond = [msg.payload[1], msg.payload[2], msg.payload[3], msg.payload[4], msg.payload[5], msg.payload[6]];//fix format later\n//var prx = msg.payload[0];\nvar crif = global.get('crif');\nvar flux = prx*2.2*(10**-5);\nif (msg.payload != \"\" && !(isNaN(b[0]))){\n    global.set('prx', prx)\n    global.set('initcond', initcond)\n    global.set('pke_flux', flux)\n    global.set(\"rho_case\", flux)\n}\n\nif (isNaN(b[0])){\n    //shoot error\n    global.set(\"tooMuchReactivity\",2);\n    global.set('on', 0);\n}\n\n\n/*\nif(crif == 1){\n    flux = 0;\n    global.set('pke_flux', 0)\n}\n*/\nmsg.payload = flux;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 1900,
+        "wires": [
+            [
+                "05fe86f31c5a1aea",
+                "b34b12f21ac5d64d",
+                "7374645e556957df"
+            ]
+        ]
+    },
+    {
+        "id": "0784fce84b1d2c1e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Samarium rho",
+        "func": "var rep = global.get('rep');\nvar sigma_a = global.get('smSigma')\nvar num_xe = global.get('numberSamarium')\nvar fast_fission = 1.022037782;//treating as constant\nvar production_rate = global.get('productionRate');\n\nvar psm = sigma_a * num_xe /(production_rate * fast_fission * rep);\nglobal.set('psm',psm)\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2380,
+        "y": 1820,
+        "wires": [
+            [
+                "e65a64891ce0bbc3"
+            ]
+        ]
+    },
+    {
+        "id": "408f68e5c8c18e7e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Samarium number of",
+        "func": "var gammaP = 0.01071;\nvar prodRate = global.get('productionRate')\nvar sigmaF = prodRate/2.42;\nvar flux = global.get('pke_flux')\nvar lambdaP = 1.5765*(10**-6);\nvar numberP = global.get('numberPm')\nvar gammaSm = 0;\nvar sigmaSm = global.get('smSigma')\nvar samariumAmount = global.get('numberSamarium')\nvar newPm = numberP +gammaP*sigmaF*flux-gammaP*numberP\nglobal.set('numberPm', newPm)\nresult = samariumAmount + lambdaP*numberP-sigmaSm*(10**-24)*samariumAmount*flux;\n//above set sigmaxe to cm^2 from barns\nif (result < 0){\n    result = 0;\n}\nglobal.set('numberSamarium', result)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2180,
+        "y": 1820,
+        "wires": [
+            [
+                "0784fce84b1d2c1e"
+            ]
+        ]
+    },
+    {
+        "id": "e65a64891ce0bbc3",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Boron rho",
+        "func": "var boronConcentration = 10;//assume 10\nvar thermalUtilization = global.get('ThermalUtilization')\nvar pb = 0.00192*boronConcentration*(1-thermalUtilization)\nglobal.set('pb',pb)\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2560,
+        "y": 1820,
+        "wires": [
+            [
+                "6136da5828853163"
+            ]
+        ]
+    },
+    {
+        "id": "05fe86f31c5a1aea",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Reactivity to Power",
+        "func": "//include time constant?\nvar P;\nvar flux = global.get('pke_flux');\nvar sf = global.get('uSigma_f');\nvar v = global.get('volume');\nvar epf = 200 *1.6022*(10**-13);//energy per fission in joules\n\n//P = flux*sf*v*epf*10**19;//convert meters to barns\n\nvar reactivity = global.get('pke_flux');\n\nP = reactivity*sf*v*epf*10**18;\n\nglobal.set('reactor_Power', P);//J\n\nvar act_prev = global.get('act');\nvar shw = 4186;//J/kg C    specifcHeatWater\nvar massWater = global.get('volume')*100;//kg\nvar temper = (P)/(massWater*shw) + act_prev;//C\n//assume 1gram of inlet at 20 degrees C\n//ask in person\n\n//very bad way of cooling, replace with proper way to cool\ntemper = (temper*0.98 + 275*0.02)//assuming  one tenth of the water gets rplaced with\n//20 degree coolant\nif (temper < 20){\n    temper = 20;\n}\n\n//var temper = act + temper;\n\n\nglobal.set('act', temper);\nmsg.payload = temper;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 1680,
+        "wires": [
+            [
+                "a0fc55f8dcf8084e",
+                "620a8a1d4b43d8f8",
+                "bc900597c0c8eab5"
+            ]
+        ]
+    },
+    {
+        "id": "7f62fabb7d6dcf0d",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 /home/pi/SeniorDesign_2022/ReactorSimulator/rho_ratio.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "rho_ratio",
+        "x": 1340,
+        "y": 1820,
+        "wires": [
+            [
+                "c2d9f7b8a330c29c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c2d9f7b8a330c29c",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set rep(resonance escape probability)",
+        "func": "var rho_ratio = msg.payload;\nvar radius = global.get('radius');\nvar density = global.get('fuelDensity');\nvar erf = global.get('enrichmentFraction');\nvar au = erf*235+(1-erf)*238;\nvar Nfuel = density *6.022*(10**23)/(au+32)\nvar I = (3 + 39.6/((radius*density)**0.5))*(10**-24)\nvar mtf = 2;//taking from hetero reactor model, assuming moderator to fuel ratio is 2\nvar msd = 1.46/rho_ratio;//gathered 1.46 from hetero reactor\n\n\n\nvar rep = 2.718281828459**(-Nfuel*I/(mtf*msd));//first number is eulers\nglobal.set('rep', rep)\nmsg.payload = [rho_ratio, I, erf];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 1820,
+        "wires": [
+            [
+                "56fde2830e6e8f0a"
+            ]
+        ]
+    },
+    {
+        "id": "4db998cf60bc6a67",
+        "type": "ui_button",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "group": "43a47f96d1bdb2fa",
+        "order": 34,
+        "width": 6,
+        "height": 5,
+        "passthru": true,
+        "label": "Start Reactor",
+        "tooltip": "",
+        "color": "#000000",
+        "bgcolor": "#00EE1E",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 1520,
+        "wires": [
+            [
+                "c09d8b4a52ea6441",
+                "c6b566e209267c26"
+            ]
+        ]
+    },
+    {
+        "id": "a0fc55f8dcf8084e",
+        "type": "delay",
+        "z": "6586a031ca9e6798",
+        "name": "Heat Catch up delay",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1520,
+        "y": 1460,
+        "wires": [
+            [
+                "3010765da9e56f94"
+            ]
+        ]
+    },
+    {
+        "id": "a3f1ceae330f9094",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "var x = global.get('on');\nvar c = global.get('counter');\nif (x == 1){\n    c= c+1;\n    global.set('counter', c);\n    msg.payload = c;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 2160,
+        "wires": [
+            [
+                "a589e857dedbebda",
+                "9f0d0f4290901f42"
+            ]
+        ]
+    },
+    {
+        "id": "7948395e88530520",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "global.set('on', 1);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 1960,
+        "wires": [
+            [
+                "a3f1ceae330f9094"
+            ]
+        ]
+    },
+    {
+        "id": "a589e857dedbebda",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "97a3bcd36d1b4f5b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "counter",
+        "label": "counter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1060,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "7eadf49588cfbb9f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "on global",
+        "func": "global.set('on', 0);\nglobal.set(\"tooMuchReactivity\",0);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9934a44bfd9a71c",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "rho ratio Junction",
+        "func": "var rho = global.get('prx');//[0.0127, 0.0317, 0.115, 0.311, 1.40, 3.87]\nlet text1 = rho.toString();\n\n\n//let textOut = text1;\nvar msgOut = { payload: text1 };\nreturn [msgOut];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 2000,
+        "wires": [
+            [
+                "7f62fabb7d6dcf0d"
+            ]
+        ]
+    },
+    {
+        "id": "0a2b7eb08d0f4343",
+        "type": "ui_chart",
+        "z": "6586a031ca9e6798",
+        "d": true,
+        "name": "",
+        "group": "65a72880f537bef0",
+        "order": 2,
+        "width": 10,
+        "height": 10,
+        "label": "Poisson Concentration Versus Time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2080,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60c5d8ebafc3f495",
+        "type": "ui_chart",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "group": "65a72880f537bef0",
+        "order": 1,
+        "width": 10,
+        "height": 10,
+        "label": "Reactivity Versus Time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2320,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "590ef3e6f53add4a",
+        "type": "ui_chart",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "group": "65a72880f537bef0",
+        "order": 3,
+        "width": 10,
+        "height": 10,
+        "label": "Temperature Versus Time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2010,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4dcfeeb8bb44ee40",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Print Time",
+        "func": "msg.payload = Date.now()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78639d32e3c96ba8",
+        "type": "ui_button",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "group": "97a3bcd36d1b4f5b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop Reactor",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 2000,
+        "wires": [
+            [
+                "97bf4756c316e00f"
+            ]
+        ]
+    },
+    {
+        "id": "97bf4756c316e00f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "global.set('on', 0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aede080b7972056f",
+        "type": "ui_button",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "group": "97a3bcd36d1b4f5b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Resume Reactor",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 2120,
+        "wires": [
+            [
+                "21379974e0502c9f"
+            ]
+        ]
+    },
+    {
+        "id": "21379974e0502c9f",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "global.set('on', 1);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2120,
+        "wires": [
+            [
+                "a3f1ceae330f9094"
+            ]
+        ]
+    },
+    {
+        "id": "ec3c921ee0112792",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "crif2",
+        "func": "global.set(\"crif2\", msg.payload/100)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "0cdc2b70e641d35e",
+                "2acdf9dba26faad0"
+            ]
+        ]
+    },
+    {
+        "id": "082805405aca345a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "crif1",
+        "func": "global.set(\"crif1\", msg.payload/100)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 680,
+        "wires": [
+            [
+                "0cdc2b70e641d35e",
+                "4ffa4231bd2a9e8d"
+            ]
+        ]
+    },
+    {
+        "id": "0cdc2b70e641d35e",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "crif_all",
+        "func": "var a = global.get(\"crif1\");\nvar b = global.get(\"crif2\");\nvar c = a + b;\nc = c /2;\nmsg.payload = c;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 660,
+        "wires": [
+            [
+                "22a5448b8b54c11a",
+                "dcb04a38f7bc3b07"
+            ]
+        ]
+    },
+    {
+        "id": "b34b12f21ac5d64d",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "xenon precluded startup",
+        "func": "var x = global.get('crif');\nvar startup = global.get('startup');\nvar y = global.get('startupCount');\nif (x < 1 && startup == 0){//run normal\n    y = y+1;\n}\nelse if(x < 1 && y >= 5 && startup == 1){//choose xenon precluded startup\n    y = y-1;\n    global.set(\"startupCount\", y);\n    global.set('pke_flux', 0)\n    //set flux and reactivity to 0\n}\nelse if(x == 1 && y >= 5 && startup == 0){//indicate xenon precluded startup\n    y = y-1;\n    startup = 1;\n}\nelse if(x < 1 && y < 5 && startup == 1){//stop xenon precluded startup\n    y = y-1;\n    startup = 0;\n}\n\nif(y > 20){\n    y = 20;\n}\nelse if(y < 0){\n    y = 0;\n}\n\nglobal.set(\"startupCount\", y);\nglobal.set(\"startup\", startup);\n\n\nmsg.payload = [x, y, startup]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 2000,
+        "wires": [
+            [
+                "e9934a44bfd9a71c",
+                "2cb8f1aba04ddd66"
+            ]
+        ]
+    },
+    {
+        "id": "2cb8f1aba04ddd66",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "de8dd77ec6ad3be3",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "Control Rod 1 Insertion (%)",
+        "label": "Control Rod 1 Insertion (%)",
+        "tooltip": "",
+        "group": "43a47f96d1bdb2fa",
+        "order": 17,
+        "width": 6,
+        "height": 2,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 40,
+        "wires": [
+            [
+                "0d990ade3445f54a",
+                "082805405aca345a",
+                "71d1e1ea12053545",
+                "f5358f228cbe7135"
+            ]
+        ]
+    },
+    {
+        "id": "0c63087634e86053",
+        "type": "ui_text_input",
+        "z": "6586a031ca9e6798",
+        "name": "Control Rod 2 Insertion (%)",
+        "label": "Control Rod 2 Insertion (%)",
+        "tooltip": "",
+        "group": "43a47f96d1bdb2fa",
+        "order": 18,
+        "width": 6,
+        "height": 2,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "6da217d835b2bcc4",
+                "ec3c921ee0112792",
+                "a97efc16767e6cb7",
+                "bf39cae99a6628ec"
+            ]
+        ]
+    },
+    {
+        "id": "cab581d8f1e4955b",
+        "type": "ui_template",
+        "z": "6586a031ca9e6798",
+        "group": "43a47f96d1bdb2fa",
+        "name": "RPV View",
+        "order": 31,
+        "width": 9,
+        "height": 8,
+        "format": "<body style=\"margin: 0px; background: #0e0e0e; height: 100%\"><h1>RPV Camera View</h1><img style=\"-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);\" src=\"http://10.0.0.10:8000/stream.mjpg\"></body>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1260,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "info": "The ip in the node needs to match the one being used to reach the dashboard. (aka the public IP addres)\nMake sure to update with the current public IP"
+    },
+    {
+        "id": "0d990ade3445f54a",
+        "type": "ui_gauge",
+        "z": "6586a031ca9e6798",
+        "name": "Control Rod 1 Insertion (%)",
+        "group": "43a47f96d1bdb2fa",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Control Rod 1 Insertion (%)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 940,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6da217d835b2bcc4",
+        "type": "ui_gauge",
+        "z": "6586a031ca9e6798",
+        "name": "Control Rod 2 Insertion (%)",
+        "group": "43a47f96d1bdb2fa",
+        "order": 3,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Control Rod 2 Insertion (%)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 940,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d172818039e9613f",
+        "type": "ui_switch",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "label": "Coolant Pump Control",
+        "tooltip": "",
+        "group": "43a47f96d1bdb2fa",
+        "order": 25,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "e383404114fd3ecc"
+            ]
+        ]
+    },
+    {
+        "id": "05dfabf80cb1cf0d",
+        "type": "ui_button",
+        "z": "6586a031ca9e6798",
+        "name": "SCRAM",
+        "group": "43a47f96d1bdb2fa",
+        "order": 35,
+        "width": 6,
+        "height": 5,
+        "passthru": false,
+        "label": "SCRAM",
+        "tooltip": "",
+        "color": "#000000",
+        "bgcolor": "#FF0000",
+        "className": "",
+        "icon": "",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "de8dd77ec6ad3be3",
+                "0c63087634e86053",
+                "cb9607b59ecb7029"
+            ]
+        ]
+    },
+    {
+        "id": "6885c4ce31c4e847",
+        "type": "ui_template",
+        "z": "6586a031ca9e6798",
+        "group": "43a47f96d1bdb2fa",
+        "name": "Pump Status",
+        "order": 26,
+        "width": 6,
+        "height": 2,
+        "format": "<style>\n.led-red {\nmargin: 0 auto;\nwidth: 24px;\nheight: 24px;\nbackground-color: #FF0000;\nborder-radius: 50%;\n{\n</style>\n<table>\n<tr>\n<td><div class=\"led-red\" style=\"background-color:{{msg.payload}}\"></div></td>\n<td>Pump Status</td>\n</tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 990,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f06dc511aeb50ab7",
+        "type": "ui_chart",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "group": "43a47f96d1bdb2fa",
+        "order": 5,
+        "width": 9,
+        "height": 7,
+        "label": "Reactor Power (W)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2330,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7263253685a7226e",
+        "type": "comment",
+        "z": "6586a031ca9e6798",
+        "name": "RPV VIEW COMMENT",
+        "info": "If providing connection over the internet, make sure ports 8000 and 1880 are open on the router and port forwarded to the raspery pi. Change the ip address to match the following format in the RPV View, but with the public IPV4 IP address of the raspberry pi.\nhttp://73.165.252.214:8000/stream.mjpg\n\nIf using localhost only (offline)\nhttp://127.0.0.1:8000/stream.mjpg\n\nIf streaming to another computer on the same local network: Use the same format but the local IP of the raspberry pi (will usually be 192.168.#.# or 10.0.#.# etc)\n\nhttp://10.0.010:8000/stream.mjpg",
+        "x": 1220,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d0cd7c2dba3357f6",
+        "type": "exec",
+        "z": "6586a031ca9e6798",
+        "command": "python3 rpi_camera_surveillance_system.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 570,
+        "y": 1420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "87cee8302888026c",
+        "type": "inject",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 1400,
+        "wires": [
+            [
+                "d0cd7c2dba3357f6"
+            ]
+        ]
+    },
+    {
+        "id": "99f0c950414c61b0",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "msg.payload = 66;\n\nglobal.set(\"CR1\", 66)\nglobal.set(\"CR2\", 66)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "de8dd77ec6ad3be3",
+                "0c63087634e86053"
+            ]
+        ]
+    },
+    {
+        "id": "620a8a1d4b43d8f8",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "print power",
+        "func": "a = global.get('reactor_Power');//J\nmsg.payload = a;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0e4704b30bbb675",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "artifact removal",
+        "func": "var a = global.get('started');\nif (a == 1){\n    return msg;\n}\nelse{\n    global.set('started', 1);\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 2380,
+        "wires": [
+            [
+                "60c5d8ebafc3f495"
+            ]
+        ]
+    },
+    {
+        "id": "bc900597c0c8eab5",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "artifact removal",
+        "func": "var a = global.get('started');\nif (a == 1){\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 1640,
+        "wires": [
+            [
+                "590ef3e6f53add4a"
+            ]
+        ]
+    },
+    {
+        "id": "0540507e6d628e9a",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "artifact removal",
+        "func": "var a = msg.payload;\nif (a < 300000){\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 2200,
+        "wires": [
+            [
+                "f06dc511aeb50ab7"
+            ]
+        ]
+    },
+    {
+        "id": "8014fe45d4a023a6",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Reactivity to Power",
+        "func": "//include time constant?\nvar P;\nvar flux = global.get('pke_flux');\nvar sf = global.get('uSigma_f');\nvar v = global.get('volume');\nvar epf = 200 *1.6022*(10**-13);//energy per fission in joules\n\n//P = flux*sf*v*epf*10**19;//convert meters to barns\n\nvar reactivity = global.get('reactivity2p');\n\n\nP = flux*sf*v*epf*10**18;\n\n//global.set('reactor_Power', P);//J\n\nmsg.payload = P;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 2260,
+        "wires": [
+            [
+                "0540507e6d628e9a"
+            ]
+        ]
+    },
+    {
+        "id": "dcb04a38f7bc3b07",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4ffa4231bd2a9e8d",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2acdf9dba26faad0",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "307a67efd7250c97",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Initialize Arduino Values",
+        "func": "global.set(\"pumpState\", 0)\nglobal.set(\"CR1\", 0)\nglobal.set(\"CR2\", 0)\nglobal.set(\"clutch\", 1)\nglobal.set(\"RLights\", 0)\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "469426e4a85dc3b7"
+            ]
+        ]
+    },
+    {
+        "id": "3ea6ec9af67e3b64",
+        "type": "serial out",
+        "z": "6586a031ca9e6798",
+        "name": "ToArduino",
+        "serial": "a0f01fc76b4087f9",
+        "x": 540,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d93f4dd3970cdc5e",
+        "type": "serial in",
+        "z": "6586a031ca9e6798",
+        "name": "FromArduino",
+        "serial": "a0f01fc76b4087f9",
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "fcb9a8646742e069"
+            ]
+        ]
+    },
+    {
+        "id": "fcb9a8646742e069",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "469426e4a85dc3b7",
+        "type": "trigger",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-100",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "80c4ecb7108c61b2"
+            ]
+        ]
+    },
+    {
+        "id": "71d1e1ea12053545",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set CR1 Value",
+        "func": "var numIn = ((100-msg.payload)/100)*500\n\nglobal.set(\"CR1\", numIn)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a97efc16767e6cb7",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set CR2 Value",
+        "func": "var numIn = ((100-msg.payload)/100)*500\n\nglobal.set(\"CR2\", numIn)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e383404114fd3ecc",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set pumpState Value",
+        "func": "var numIn = msg.payload\n\nif (numIn == 1){\n    global.set(\"pumpState\",1)\n    msg.payload = \"#00ff00\"\n}\nelse{\n    global.set(\"pumpState\",0)\n    msg.payload = \"#ff0000\"\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 160,
+        "wires": [
+            [
+                "6885c4ce31c4e847",
+                "cdedf5849501e0ba"
+            ]
+        ]
+    },
+    {
+        "id": "cdedf5849501e0ba",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2c27b13dee08bc3b",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Set RLights",
+        "func": "var numIn = msg.payload\n\nif (numIn > 1){\n    numIn = 1\n}\n\nif (numIn < 0){\n    numIn = 0\n}\n// (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min\nnumIn = (numIn * 255) / (0.006) //give an offset because 99% inserted = 110\nnumIn = Math.round(numIn)\n\n\nif (numIn < 0){\n    numIn = 0\n}\n\nglobal.set(\"RLights\", numIn)\nmsg.payload = numIn\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 2520,
+        "wires": [
+            [
+                "60649423cdc369f1"
+            ]
+        ]
+    },
+    {
+        "id": "c6b566e209267c26",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "set clutch on",
+        "func": "global.set(\"clutch\",1)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb9607b59ecb7029",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "set clutch off",
+        "func": "global.set(\"clutch\",0)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80c4ecb7108c61b2",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "Send Values To Arduino",
+        "func": "var pumps = global.get(\"pumpState\", 0);\nvar cr1 = global.get(\"CR1\", 0);\nvar cr2 = global.get(\"CR2\", 0);\nvar clutch = global.get(\"clutch\", 0);\nvar rl = global.get(\"RLights\", 0);\n\nvar stringout = \"b,\" + cr1 + \",\" + cr2 + \",\" + rl + \",\" + clutch + \",\" + clutch + \",\" + pumps + \",\" + pumps + \",\" + pumps + \",e\"\n\nmsg.payload = stringout\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "dfcc71776e42a053",
+                "3ea6ec9af67e3b64"
+            ]
+        ]
+    },
+    {
+        "id": "dfcc71776e42a053",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "bf39cae99a6628ec",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "var valIn = msg.payload\nif (valIn > 100){\n    msg.payload = 100\n}\nif (valIn < 1){\n    msg.payload = 1\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "0c63087634e86053"
+            ]
+        ]
+    },
+    {
+        "id": "f5358f228cbe7135",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "var valIn = msg.payload\nif (valIn > 100){\n    msg.payload = 100\n}\nif (valIn < 1){\n    msg.payload = 1\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 80,
+        "wires": [
+            [
+                "de8dd77ec6ad3be3"
+            ]
+        ]
+    },
+    {
+        "id": "f1b9f88ff3721e84",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4370,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "40d809ff5523f477",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2390,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "02b70f95953e8b5d",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "sumation of fuel",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "7348f61e28d4e2e6",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "78ad15ec2efcc6b0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "p rod",
+        "label": "p rod",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 4690,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "659c7f92a338a06f",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2310,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "f76abf4a8a177508",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "var b = global.get('pb');\nvar rx = global.get('prx');\nvar xe = global.get('pxe');\nvar sm = global.get('psm');\nvar rnorod = global.get('pnorod');//changes with thermal ut//rho no rod\nvar controlRod = global.get('rowrod');\n\nmsg.payload = [b, rx, xe, sm, rnorod, controlRod];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2020,
+        "y": 2060,
+        "wires": [
+            [
+                "659c7f92a338a06f"
+            ]
+        ]
+    },
+    {
+        "id": "90a7c1c342275908",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "ccbfbedaa49c082f",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "0d3f05e6ee981292",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "7374645e556957df",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "7b0833dd4b4478a4",
+        "type": "function",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "func": "var localWarn = global.get(\"tooMuchReactivity\")\nvar stringOut = \"\"\nif (localWarn == 0){\n    stringOut = \"Reactivity in acceptable levels\"\n}\nif (localWarn == 1){\n    stringOut = \"WARNING: Too much reactivity added to the reactor! Simulator will soon fail (Reactor will malfunction)\"\n}\nif (localWarn == 2){\n    stringOut = \"Reactor has malfunctioned! Systems stopped. To restart: Use Value Reset then Start Reactor\"\n}\nmsg.payload = stringOut;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 2520,
+        "wires": [
+            [
+                "dd6fb2deee98ebdf"
+            ]
+        ]
+    },
+    {
+        "id": "dd6fb2deee98ebdf",
+        "type": "ui_text",
+        "z": "6586a031ca9e6798",
+        "group": "43a47f96d1bdb2fa",
+        "order": 51,
+        "width": 12,
+        "height": 2,
+        "name": "Notice",
+        "label": "Notice",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2010,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "60649423cdc369f1",
+        "type": "debug",
+        "z": "6586a031ca9e6798",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 2520,
+        "wires": []
+    }
+]

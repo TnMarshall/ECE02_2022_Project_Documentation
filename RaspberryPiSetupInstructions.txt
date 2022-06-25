@@ -1,0 +1,49 @@
+Using bullseye 2021-10-30
+
+1.) use raspberry-pi imager to load full desktop version (erase the card first if necessarye
+2.) plug in raspberry-pi to monitor, power, mouse, keyboard (try to avoid headless setup as it is easier to make a mistake during)
+	NOTE: Ethernet is also helpful for this if wifi networks are uncooperative
+3.) Follow the raspberry-pi setup (ece02)
+4.) Go into the apps menu (top left raspberry), go to preferences->raspberry pi configuration->display->set headless resolution to 1920x1080 or whatever you prefer (helps make sure the machine boots even with any cable issues)
+4.) a) in interfaces set SSH and VNC to enable (only neccessary if you intend to remote access)
+5.) allow the system to restart -> type hostname -I to find the local IP (make sure the wifi is on and you get the wifi ip) 
+    ->SSH into from another computer to confirm access (do the same with VNC if you want access to the GUI, VNC can be installed on windows).
+6.) reboot with ethernet disconnected to verify headless over wifi if ethernet is not possible
+
+
+SETUP CAMERA
+Be aware, this method will be deprecated in the future and a solution using libcamera should be found or written
+Also, this method disables VNC for some reason (when legacy camera is enabled)
+
+1.) open a terminal and enter 'sudo raspi-config' (or ssh in if accessing remotely)
+2.) Interface options -> legacy camera -> enable -> finish -> reboot 
+	NOTE: This will give a deprecation warning. For the time being, the method remains intact. Furthermore the camera is not neccessary for in-person use.
+3.) open a terminal and enter 'nano rpi_camera_surveillance_system.py'
+4.) copy/paste the code from this link "https://randomnerdtutorials.com/video-streaming-with-raspberry-pi-camera/" (a copy is also provided in the repository)
+(the code example is from the picamera library so shouldnt really be a problem to use it licensing-wise I dont think)
+5.) ctrl-x -> y -> enter     to save
+6.) python3 rpi_camera_surveillance_system.py
+7.) test by entering the following ip into browser  (in the case of localhosting the ip is 127.0.0.1)  http://{raspberryPi'sIpGoesHere}:8000
+8.) do whatever you have to do to portforward on your router if you want it to be internet accessible
+
+
+Setup NODERED
+1.) https://nodered.org/docs/getting-started/raspberrypi follow the instructions here (also enable autostart on boot)
+2.) dont forget node-red init (you'll need the settings file for later) (~/.node-red)
+3.) security (This is only necessary if the automatic setup does not work)
+    a.) node-red admin hash-pw "typePasswordHere"
+    b.) copy and paste the hash into the password section specified in the tutorial in the settingsFile
+    c.) save
+Steps 4-6 are only neccesary for across internet access
+4.) make sure to update portforwarding if across internet use is desired
+5.) node-red-log to check port, then ifconfig for ip
+6.) load up the nodered flows on your pc
+
+7.) add the following items to the pallet via "tripplebarmenuintopright"->manage pallet
+-node-red-dashboard
+-node-red-node-pi-gpio
+-node-red-contrib-ui-level
+8.) make sure you have a copy of the repo from github (lookup github clone instructions)
+9.) load flow - "triplebarmenuintopright"->import->select a file to import->find the flow you want in the cloned repo
+10.) deploy
+11.) verify by logging in to the node-red dashboard http://raspberryPiInternetorLocalIPhere:1880/ui/#/1

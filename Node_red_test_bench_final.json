@@ -1,0 +1,1160 @@
+[
+    {
+        "id": "442507a05b5bddc1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bb88f94776774155",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a469988a889b3ca5",
+        "type": "serial-port",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "50",
+        "bin": "false",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "50"
+    },
+    {
+        "id": "2f565c315a0c93b9",
+        "type": "ui_tab",
+        "name": "Test Bench",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e28682469f02479a",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "2f565c315a0c93b9",
+        "order": 1,
+        "disp": true,
+        "width": 16
+    },
+    {
+        "id": "1ce9df106c76fdba",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "2f565c315a0c93b9",
+        "order": 2,
+        "disp": true,
+        "width": 12
+    },
+    {
+        "id": "c2f305418348a632",
+        "type": "ui_slider",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Control Rod 1",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "className": "",
+        "x": 300,
+        "y": 220,
+        "wires": [
+            [
+                "ca10345eb2c76cbd"
+            ]
+        ]
+    },
+    {
+        "id": "c899e64ceeaae9d3",
+        "type": "ui_slider",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Control Rod 2",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "className": "",
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "f6b4c978214902ad"
+            ]
+        ]
+    },
+    {
+        "id": "74b3bc812ecd4314",
+        "type": "ui_switch",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Pump Lights",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 290,
+        "y": 460,
+        "wires": [
+            [
+                "378a3d61ee873148"
+            ]
+        ]
+    },
+    {
+        "id": "24e59f6448f56894",
+        "type": "ui_slider",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Reactivity Lights",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "db464a8d08c4d253"
+            ]
+        ]
+    },
+    {
+        "id": "74eb27f2bc029642",
+        "type": "ui_switch",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Clutch 1",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 620,
+        "wires": [
+            [
+                "caeb961e63db667d"
+            ]
+        ]
+    },
+    {
+        "id": "a3eee0558bfba672",
+        "type": "ui_switch",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Clutch 2",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 680,
+        "wires": [
+            [
+                "1eaf15e9468473a3"
+            ]
+        ]
+    },
+    {
+        "id": "ca10345eb2c76cbd",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('cr1', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6b4c978214902ad",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('cr2', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d975302a97bad26",
+        "type": "inject",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "e6ea98f45d3db40e",
+                "8bc0adccd86249b0"
+            ]
+        ]
+    },
+    {
+        "id": "e6ea98f45d3db40e",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "Setup",
+        "func": "global.set('cr1', 0)\nglobal.set('cr2', 0)\nglobal.set('RL', 0)\nglobal.set('P', 0)\nglobal.set('p1', 0)\nglobal.set('p2', 0)\nglobal.set('c1', 0)\nglobal.set('c2', 0)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db464a8d08c4d253",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('RL', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "378a3d61ee873148",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('P', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "caeb961e63db667d",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('c1', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1eaf15e9468473a3",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('c2', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a72fac7fa7b4b497",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "CR1",
+        "group": "1ce9df106c76fdba",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CR1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1130,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a92ef10a6ebf3c0c",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "CR2",
+        "group": "1ce9df106c76fdba",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Cr2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1130,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f1199ac43078b4c2",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "RL",
+        "group": "1ce9df106c76fdba",
+        "order": 3,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "RL",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "255",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1130,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e9594e9dbdab2919",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "Pump Lights",
+        "group": "1ce9df106c76fdba",
+        "order": 4,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Pump Lights",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1150,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e4076e6857e934e2",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "Clutch1",
+        "group": "1ce9df106c76fdba",
+        "order": 5,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Clutch1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1140,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3c2379aa47a5e356",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "Clutch2",
+        "group": "1ce9df106c76fdba",
+        "order": 6,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Clutch2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1140,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "75df09be0efa1b12",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"cr1\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 220,
+        "wires": [
+            [
+                "a72fac7fa7b4b497"
+            ]
+        ]
+    },
+    {
+        "id": "f21811ea172efabe",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"cr2\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 300,
+        "wires": [
+            [
+                "a92ef10a6ebf3c0c"
+            ]
+        ]
+    },
+    {
+        "id": "482a58facb65f009",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"RL\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 380,
+        "wires": [
+            [
+                "f1199ac43078b4c2"
+            ]
+        ]
+    },
+    {
+        "id": "752ac21838084d68",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"P\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 440,
+        "wires": [
+            [
+                "e9594e9dbdab2919"
+            ]
+        ]
+    },
+    {
+        "id": "1b1ad90f721327c7",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"c1\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 580,
+        "wires": [
+            [
+                "e4076e6857e934e2"
+            ]
+        ]
+    },
+    {
+        "id": "71fb5a08b761a237",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"c2\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 640,
+        "wires": [
+            [
+                "3c2379aa47a5e356"
+            ]
+        ]
+    },
+    {
+        "id": "8923e8544323d06d",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "var cR1 = global.get(\"cr1\")\nvar cR2 = global.get(\"cr2\")\nvar c1 = global.get(\"c1\")\nvar c2 = global.get(\"c2\")\nvar rl = global.get(\"RL\")\nvar pump = global.get(\"P\")\n\nvar pump1 = global.get(\"p1\")\nvar pump2 = global.get(\"p2\")\n\nvar stringout = \"b,\" + cR1 + \",\" + cR2 + \",\" + rl + \",\" + c1 + \",\" + c2 + \",\" + pump1 + \",\" + pump2 + \",\" + pump + \",e\"\n// var stringout = \"b,\" + cR1 + \",\" + cR2 + \",\" + rl + \",\" + c1 + \",\" + c2 + \",\" + \"0\" + \",\" + \"0\" + \",\" + pump + \",e\"\nmsg.payload = stringout\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 720,
+        "wires": [
+            [
+                "29c5f90531d0cd30",
+                "64baa1c1d78d6c07"
+            ]
+        ]
+    },
+    {
+        "id": "29c5f90531d0cd30",
+        "type": "debug",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "0fd912282d0e7945",
+        "type": "serial in",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "serial": "a469988a889b3ca5",
+        "x": 650,
+        "y": 840,
+        "wires": [
+            [
+                "b2754e1e6267cda3"
+            ]
+        ]
+    },
+    {
+        "id": "b2754e1e6267cda3",
+        "type": "debug",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "8bc0adccd86249b0",
+        "type": "exec",
+        "z": "442507a05b5bddc1",
+        "command": "sudo chmod 777 /dev/ttyACM0",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "64baa1c1d78d6c07",
+        "type": "serial out",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "serial": "a469988a889b3ca5",
+        "x": 1140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b4a3169e1852d4c0",
+        "type": "inject",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "b,0,0,0,0,0,0,0,0,e",
+        "payloadType": "str",
+        "x": 670,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a10d35ecf377369c",
+        "type": "trigger",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-200",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "75df09be0efa1b12",
+                "f21811ea172efabe",
+                "482a58facb65f009",
+                "752ac21838084d68",
+                "1b1ad90f721327c7",
+                "71fb5a08b761a237",
+                "8923e8544323d06d",
+                "754bfbf654522039",
+                "0f5dc38741ccb408"
+            ]
+        ]
+    },
+    {
+        "id": "3a01945c58a23931",
+        "type": "ui_button",
+        "z": "442507a05b5bddc1",
+        "name": "Begin",
+        "group": "e28682469f02479a",
+        "order": 10,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "label": "Begin",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "a10d35ecf377369c"
+            ]
+        ]
+    },
+    {
+        "id": "4cb4bd91d69e7092",
+        "type": "ui_switch",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Pump 1",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "f35a7893c9aca041"
+            ]
+        ]
+    },
+    {
+        "id": "ca03d682a0b88acc",
+        "type": "ui_switch",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "label": "Pump 2",
+        "tooltip": "",
+        "group": "e28682469f02479a",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 540,
+        "wires": [
+            [
+                "04b7914f040ef02b"
+            ]
+        ]
+    },
+    {
+        "id": "f35a7893c9aca041",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('p1', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04b7914f040ef02b",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "global.set('p2', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "754bfbf654522039",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"p1\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "cb73f64128a8e8cb"
+            ]
+        ]
+    },
+    {
+        "id": "0f5dc38741ccb408",
+        "type": "function",
+        "z": "442507a05b5bddc1",
+        "name": "",
+        "func": "msg.payload = global.get(\"p2\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "15f1739bc0fab8d6"
+            ]
+        ]
+    },
+    {
+        "id": "cb73f64128a8e8cb",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "Pump1",
+        "group": "1ce9df106c76fdba",
+        "order": 7,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Pump1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1140,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "15f1739bc0fab8d6",
+        "type": "ui_gauge",
+        "z": "442507a05b5bddc1",
+        "name": "Pump2",
+        "group": "1ce9df106c76fdba",
+        "order": 8,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Pump2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1140,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "67f1647c9faaf34a",
+        "type": "ui_template",
+        "z": "442507a05b5bddc1",
+        "group": "e28682469f02479a",
+        "name": "RPV View",
+        "order": 2,
+        "width": 10,
+        "height": 10,
+        "format": "<body style=\"margin: 0px; background: #0e0e0e; height: 100%\">\n    <h1>RPV Camera View</h1><img style=\"-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);\" src=\"http://10.0.0.10:8000/stream.mjpg\">\n</body>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    }
+]
