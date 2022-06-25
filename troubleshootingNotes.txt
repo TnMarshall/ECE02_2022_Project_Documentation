@@ -1,0 +1,18 @@
+This file will be replaced by a version with pictures in the future.
+
+Troubleshooting:
+Should the system freeze, restarting node red or simply redeploying should solve the problem. Slightly moving a node in the
+editor allows the system to be redeployed without any serious edits.
+
+Should the clutches not engage, it is likely their position needs to be readjusted. The pads should be as close to the clutch as possible without touching. This way when the magnet is activated they will be pulled in.
+
+If the clutches are engaged but the control rods are not lifting, this may mean one of the set screws has come loose. Tighten all the set screws on the clutches and couplers.
+
+
+
+NOTE: If the LED strip flashes when the clutches or pumps are activated or deactivated, this is normal. It is due to transients from the mechanical relays. Steps have
+been taken to prevent damaging transients, but some noticeable transients are still present
+
+
+If the original model is being used without being set up from scratch based on the instructions in this repository, then load
+the node red JSON file ended with _ORIGINAL. This file uses the original paths instead of those used in the version made for easier distrobution.

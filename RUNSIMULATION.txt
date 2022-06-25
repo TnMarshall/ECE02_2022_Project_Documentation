@@ -1,0 +1,19 @@
+This document contains preliminary instructions without images while awaiting access to hardware to obtain images for a more
+thorough instruction of how to start and interact with the simulation.
+
+1. Go to the tab labeled Inputs (second from the top of the list). Click 'Reset Inputs'. This will auto populate the system with
+a useable configuration.
+2. Return to the first page and click 'Start Reactor'
+
+Once the reactor is started, the heights of the control rods can be controlled and the ability to scram the reactor.
+
+A few notes:
+If the system is given too much reactivity (control rods extracted too much) it will give a warning and subsequently halt. This is due to the fact that reactivity can quickly grow and the reactor would, in reality, be damaged and need to be shut down.
+
+If the reactor is scrammed, the "Start Reactor" button must be pushed again to re-engage the control rods.
+
+
+Troubleshooting:
+Should the system freeze, restarting node red or simply redeploying should solve the problem. Slightly moving a node in the
+editor allows the system to be redeployed without any serious edits.
+
