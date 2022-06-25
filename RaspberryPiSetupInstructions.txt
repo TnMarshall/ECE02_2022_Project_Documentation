@@ -28,23 +28,21 @@ Also, this method disables VNC for some reason (when legacy camera is enabled)
 
 
 Setup NODERED
-1.) https://nodered.org/docs/getting-started/raspberrypi follow the instructions here (also enable autostart on boot)
-2.) dont forget node-red init (you'll need the settings file for later) (~/.node-red)
+1.) https://nodered.org/docs/getting-started/raspberrypi follow the instructions here
+2.) dont forget 'node-red init' (you'll need the settings file for later) (~/.node-red)  (also enable autostart on boot)
 3.) security (This is only necessary if the automatic setup does not work)
     a.) node-red admin hash-pw "typePasswordHere"
     b.) copy and paste the hash into the password section specified in the tutorial in the settingsFile
     c.) save
+    d.) reboot
 Steps 4 and 5 are only neccesary for across internet access
 4.) make sure to update portforwarding if across internet use is desired
 5.) node-red-log to check port, then ifconfig for ip
-6.) load up the nodered flows on your pc from the github (either the test bench or the simulator)
-	git clone https://github.com/TnMarshall/ECE02_2022_Project_Documentation.git
-
-7.) add the following items to the pallet via "tripplebarmenuintopright"->manage pallet
+6.) add the following items to the pallet via "tripplebarmenuintopright"->manage pallet
 -node-red-dashboard
--node-red-node-pi-gpio
--node-red-contrib-ui-level
-8.) make sure you have a copy of the repo from github (lookup github clone instructions)
-9.) load flow - "triplebarmenuintopright"->import->select a file to import->find the flow you want in the cloned repo
-10.) deploy
-11.) verify by logging in to the node-red dashboard http://raspberryPiInternetorLocalIPhere:1880/ui/#/1
+7.) load up the nodered flows on your pc from the github (either the test bench or the simulator)
+	a.) git clone https://github.com/TnMarshall/ECE02_2022_Project_Documentation.git
+	b.) in a browser go to 127.0.0.1:1880 (this is the node-red editor)
+	c.) from the menu, import the desired json from the repository
+	d.) deploy
+11.) verify by logging in to the node-red dashboard http://127.0.0.1:1880/ui/#/1
