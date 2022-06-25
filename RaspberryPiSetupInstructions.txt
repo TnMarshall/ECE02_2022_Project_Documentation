@@ -1,14 +1,14 @@
-Using bullseye 2021-10-30
+Using bullseye 2022-04-04
 
-1.) use raspberry-pi imager to load full desktop version (erase the card first if necessarye
+1.) use raspberry-pi imager to load full desktop version (erase the card first if necessary)
 2.) plug in raspberry-pi to monitor, power, mouse, keyboard (try to avoid headless setup as it is easier to make a mistake during)
 	NOTE: Ethernet is also helpful for this if wifi networks are uncooperative
 3.) Follow the raspberry-pi setup (ece02)
 4.) Go into the apps menu (top left raspberry), go to preferences->raspberry pi configuration->display->set headless resolution to 1920x1080 or whatever you prefer (helps make sure the machine boots even with any cable issues)
-4.) a) in interfaces set SSH and VNC to enable (only neccessary if you intend to remote access)
-5.) allow the system to restart -> type hostname -I to find the local IP (make sure the wifi is on and you get the wifi ip) 
+5.) a) in interfaces set SSH and VNC to enable (only neccessary if you intend to remote access)
+6.) allow the system to restart -> type hostname -I to find the local IP (make sure the wifi is on and you get the wifi ip) 
     ->SSH into from another computer to confirm access (do the same with VNC if you want access to the GUI, VNC can be installed on windows).
-6.) reboot with ethernet disconnected to verify headless over wifi if ethernet is not possible
+7.) reboot with ethernet disconnected to verify headless over wifi if ethernet is not possible
 
 
 SETUP CAMERA
@@ -40,9 +40,17 @@ Steps 4 and 5 are only neccesary for across internet access
 5.) node-red-log to check port, then ifconfig for ip
 6.) add the following items to the pallet via "tripplebarmenuintopright"->manage pallet
 -node-red-dashboard
-7.) load up the nodered flows on your pc from the github (either the test bench or the simulator)
+7.) pip3 install the following modules:
+	pyXSteam
+	scipy
+	pip3 install --upgrade numpy
+
+    and the following apt installs:
+	sudo apt-get install libatlas-base-dev
+8.) REBOOT	
+9.) load up the nodered flows on your pc from the github (either the test bench or the simulator)
 	a.) git clone https://github.com/TnMarshall/ECE02_2022_Project_Documentation.git
 	b.) in a browser go to 127.0.0.1:1880 (this is the node-red editor)
 	c.) from the menu, import the desired json from the repository
 	d.) deploy
-11.) verify by logging in to the node-red dashboard http://127.0.0.1:1880/ui/#/1
+10.) verify by logging in to the node-red dashboard http://127.0.0.1:1880/ui/#/1
